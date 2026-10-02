@@ -1,0 +1,39 @@
+
+def calculate_grade(marks):
+    """Function to calculate grade using if-elif-else"""
+    if marks < 0 or marks > 100:
+        return "Invalid Marks"
+    elif marks >= 90:
+        return "A - Excellent"
+    elif marks >= 80:
+        return "B - Very Good"
+    elif marks >= 70:
+        return "C - Good"
+    elif marks >= 60:
+        return "D - Pass"
+    else:
+        return "F - Fail"
+
+# Manually created student marks dataset
+students = [
+    {"name": "Sameera", "marks": 92},
+    {"name": "Aarav", "marks": 85},
+    {"name": "Priya", "marks": 78},
+    {"name": "Rahul", "marks": 65},
+    {"name": "Anil", "marks": 45},
+    {"name": "Test_Invalid", "marks": 105}
+]
+
+print("="*50)
+print("   STUDENT GRADE CALCULATOR - TASK 2")
+print("="*50)
+
+for s in students:
+    grade = calculate_grade(s["marks"])
+    print(f"Student: {s['name']:15} | Marks: {s['marks']:3} | Grade: {grade}")
+
+print("="*50)
+print("Interview Q&A:")
+print("1. if-elif-else purpose: To execute different blocks based on conditions")
+print("2. Invalid marks: Handled with if marks<0 or >100")
+print("3. Yes, conditionals can be used while processing datasets")
